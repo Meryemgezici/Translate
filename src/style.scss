@@ -51,6 +51,11 @@ body {
         resize: none;
     }
 
+    textarea:disabled {
+        background: #F5F5F5;
+        color: black;
+      }
+
     .chance-btn{
         background-color: #005B41;
         color: white;
@@ -78,5 +83,11 @@ body {
         &:hover{
             scale: 1.01;
         }
+}
+
+.select{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
 }
 
