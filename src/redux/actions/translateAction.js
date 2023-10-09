@@ -13,14 +13,14 @@ export const getLanguages = createAsyncThunk("getLanguages", async () => {
 
 
     );
-    
+
 
     return newData;
 });
 
 
 export const textTranslate = createAsyncThunk("textTranslate", async (params) => {
-    
+
     const encodedParams = new URLSearchParams();
     encodedParams.set('source_language', params.sourceLang.value
     );
@@ -39,7 +39,7 @@ export const textTranslate = createAsyncThunk("textTranslate", async (params) =>
         data: encodedParams,
     };
 
-    const res= await axios.request(options);
+    const res = await axios.request(options);
 
     return res.data.data.translatedText;
 })

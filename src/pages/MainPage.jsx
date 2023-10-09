@@ -9,15 +9,15 @@ const MainPage = () => {
     const state = useSelector((store) => store.translateSlice);
     const [sourceLang, setSourceLang] = useState({ value: 'tr', label: 'Turkish' });
     const [targetLang, setTargetLang] = useState({ value: 'en', label: 'English' });
-    const [text,setText]=useState("");
+    const [text, setText] = useState("");
 
     useEffect(() => {
         dispatch(getLanguages());
     }, []);
 
-    const handleChance=()=>{
-        const chanceSource=targetLang;
-        const chancetarget=sourceLang;
+    const handleChance = () => {
+        const chanceSource = targetLang;
+        const chancetarget = sourceLang;
         setSourceLang(chanceSource);
         setTargetLang(chancetarget);
 
@@ -31,14 +31,14 @@ const MainPage = () => {
                 <div className="translate-area">
                     <div className="left">
                         <Select
-                            isDisabled={state.isLoading}
+                             isDisabled={state.isLoading}
                             isLoading={state.isLoading}
                             value={sourceLang}
                             onChange={(e) => setSourceLang(e)}
                             className="select" options={state.languages} />
                         <textarea value={text}
-                        onChange={(e)=>setText(e.target.value)}
-                        name="" id="" cols="30" rows="10"></textarea>
+                            onChange={(e) => setText(e.target.value)}
+                            name="" id="" cols="30" rows="10"></textarea>
                     </div>
 
                     <button onClick={handleChance} className="chance-btn">Değiş</button>
@@ -55,7 +55,7 @@ const MainPage = () => {
 
                 </div>
 
-                <button className="translate-btn" onClick={()=>dispatch(textTranslate({sourceLang,targetLang,text}))}>Çevir</button>
+                <button className="translate-btn" onClick={() => dispatch(textTranslate({ sourceLang, targetLang, text }))}>Çevir</button>
 
             </div>
         </div>

@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100&family=Raleway:wght@300&family=Roboto:wght@300&display=swap');
 
 body {
-  margin: 0;
-  font-family: "poppins";
-  line-height: 1.5;
-  font-weight: 400;
+    margin: 0;
+    font-family: "poppins";
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
 
 }
 
-.main-page{
+.main-page {
     height: 100vh;
     display: grid;
     place-items: center;
     overflow: hidden;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,21 +27,24 @@ body {
     max-width: 1000px;
     gap: 20px;
 
-    h1{
+    h1 {
         text-align: center;
     }
 }
 
-.translate-area{
+.translate-area {
     display: flex;
     justify-content: center;
     gap: 20px;
-    .left,.right{
+
+    .left,
+    .right {
         display: flex;
         flex-direction: column;
         width: 100%;
-    } 
-    textarea{
+    }
+
+    textarea {
         min-height: 300px;
         font-size: 17px;
         font-family: "poppins";
@@ -54,9 +57,9 @@ body {
     textarea:disabled {
         background: #F5F5F5;
         color: black;
-      }
+    }
 
-    .chance-btn{
+    .chance-btn {
         background-color: #005B41;
         color: white;
         height: 50px;
@@ -64,30 +67,30 @@ body {
         border-radius: 10px;
         font-size: 20px;
         cursor: pointer;
-        transition:  0.1s;
+        transition: 0.1s;
 
-        &:hover{
+        &:hover {
             scale: 1.1;
         }
     }
 }
 
-.translate-btn{
-        background-color: #005B41;
-        color: white; 
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 24px;
-        cursor: pointer;
-        transition:  0.1s;
-        &:hover{
-            scale: 1.01;
-        }
+.translate-btn {
+    background-color: #005B41;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+        scale: 1.01;
+    }
 }
 
-.select{
+.select {
     color: black;
     font-size: 17px;
     font-weight: bold;
 }
-
